@@ -1131,8 +1131,6 @@ namespace youxi
 
             InitRandomBrick();      //生成level行随机砖块，增加游戏可玩度
         }
-
-        public GamePalette() { }
         #endregion
 
         #region 属性访问器
@@ -1176,10 +1174,8 @@ namespace youxi
             get { return m_Width; }
             set
             {
-                if (value <= 0) ;
-                else
-                    m_Width = value;
-                    
+                if (value != 0)
+                    m_Width = value;        
             }
         }
 
@@ -1191,8 +1187,7 @@ namespace youxi
             get { return m_Heigth ; }
             set
             {
-                if (value <= 0) ;
-                else
+                if (value != 0)
                     m_Heigth = value;
             }
         }

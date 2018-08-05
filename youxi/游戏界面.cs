@@ -12,7 +12,7 @@ namespace youxi
 {
     public partial class 游戏界面 : Form
     {
-        private GamePalette m_GamePalette = new GamePalette();      //定义一个游戏画布
+        private GamePalette m_GamePalette;      //定义一个游戏画布
         public 游戏界面()
         {
             InitializeComponent();
