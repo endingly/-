@@ -1072,8 +1072,8 @@ namespace youxi
 
         #region 变量
         private BrickFactory m_BrickFactory;    //砖块产生机
-        private int m_Width = 15;               //画布宽；
-        private int m_Heigth = 25;              //画布高
+        private int m_Width;               //画布宽；
+        private int m_Heigth;              //画布高
         private Color[,] m_ColorArray;          //固定砖块颜色数组
         private Color m_backGroundColor;        //背景色
         private Color m_GridColor;              //网格颜色
@@ -1131,6 +1131,8 @@ namespace youxi
 
             InitRandomBrick();      //生成level行随机砖块，增加游戏可玩度
         }
+
+        public GamePalette() { }
         #endregion
 
         #region 属性访问器
@@ -1164,6 +1166,35 @@ namespace youxi
         public bool IsRunning
         {
             get { return m_Ready; }
+        }
+
+        /// <summary>
+        /// 访问私有数据成员：画布宽度
+        /// </summary>
+        public int Width
+        {
+            get { return m_Width; }
+            set
+            {
+                if (value <= 0) ;
+                else
+                    m_Width = value;
+                    
+            }
+        }
+
+        /// <summary>
+        /// 访问私有数据成员画布高度
+        /// </summary>
+        public int Height
+        {
+            get { return m_Heigth ; }
+            set
+            {
+                if (value <= 0) ;
+                else
+                    m_Heigth = value;
+            }
         }
         #endregion
 

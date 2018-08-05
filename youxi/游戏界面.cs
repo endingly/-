@@ -12,7 +12,7 @@ namespace youxi
 {
     public partial class 游戏界面 : Form
     {
-        private GamePalette m_GamePalette;      //定义一个游戏画布
+        private GamePalette m_GamePalette = new GamePalette();      //定义一个游戏画布
         public 游戏界面()
         {
             InitializeComponent();
@@ -42,6 +42,8 @@ namespace youxi
                 array.Add("0000000000011000110000000", Color.FromArgb(-8323073));
                 //开始新游戏
                 m_GamePalette = new GamePalette(13, 20, array, 20, Color.Black, pbMainPalette.CreateGraphics(), pbNextPalette.CreateGraphics(), 0, Color.Red, true);
+                m_GamePalette.Height = pictureBox1.Height;
+                m_GamePalette.Width = pictureBox1.Width;
                 m_GamePalette.Start();
             }
             else
